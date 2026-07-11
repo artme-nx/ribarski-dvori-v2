@@ -1,0 +1,85 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-stone-100: #EDE7DA;
+  --primitive-color-stone-200: #D8CFBC;
+  --primitive-color-stone-400: #A99C87;
+  --primitive-color-stone-600: #6B5F4F;
+  --primitive-color-stone-800: #392F26;
+  --primitive-color-stone-900: #241D17;
+  --primitive-color-stone-950: #16110D;
+  --primitive-color-sea-300: #8FC2BA;
+  --primitive-color-sea-500: #2F7A78;
+  --primitive-color-sea-700: #1B4F4E;
+  --primitive-color-ember-400: #D97D4A;
+  --primitive-color-ember-600: #B8501F;
+  --primitive-color-ember-800: #5E2410;
+  --primitive-font-display: var(--font-fraunces), 'Fraunces', Georgia, serif;
+  --primitive-font-sans: var(--font-manrope), system-ui, sans-serif;
+  --primitive-font-mono: var(--font-geist-mono), 'SF Mono', monospace;
+  --primitive-motion-duration-micro: 180ms;
+  --primitive-motion-duration-base: 320ms;
+  --primitive-motion-duration-settle: 1.0s;
+  --primitive-motion-duration-drift: 2.2s;
+  --primitive-motion-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --primitive-motion-ease-tide: cubic-bezier(0.45, 0, 0.2, 1);
+  --primitive-tracking-display: -0.01em;
+  --primitive-tracking-label: 0.18em;
+}
+
+/* === SEMANTIC === */
+:root {
+  --background: #16110D;
+  --foreground: #EDE7DA;
+  --card: #241D17;
+  --card-foreground: #EDE7DA;
+  --popover: #241D17;
+  --popover-foreground: #EDE7DA;
+  --primary: #EDE7DA;
+  --primary-foreground: #16110D;
+  --secondary: #392F26;
+  --secondary-foreground: #EDE7DA;
+  --muted: #392F26;
+  --muted-foreground: #A99C87;
+  --accent: #392F26;
+  --accent-foreground: #EDE7DA;
+  --destructive: #B8501F;
+  --border: #392F26;
+  --input: #392F26;
+  --ring: #2F7A78;
+  --radius: 0.25rem;
+  --sea: #2F7A78;
+  --sea-bright: #8FC2BA;
+  --sea-deep: #1B4F4E;
+  --ember: #D97D4A;
+  --ember-deep: #5E2410;
+  --grout: #16110D;
+  --stone-face: #392F26;
+  --stone-face-bright: #6B5F4F;
+  --type-display: var(--font-fraunces), 'Fraunces', Georgia, serif;
+  --type-body: var(--font-manrope), system-ui, sans-serif;
+  --type-label: var(--font-geist-mono), 'SF Mono', monospace;
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-tide: cubic-bezier(0.45, 0, 0.2, 1);
+  --duration-micro: 180ms;
+  --duration-base: 320ms;
+  --duration-settle: 1.0s;
+  --tracking-display: -0.01em;
+  --tracking-label: 0.18em;
+}
+
+/* === COMPONENTS === */
+:root {
+  --flagstone-grout-width: 0.6rem;
+  --flagstone-tilt-max: 1.4deg;
+  --flagstone-glow: radial-gradient(ellipse 70% 50% at 30% 20%, rgba(217, 125, 74, 0.16), transparent 60%);
+  --flagstone-night-vignette: radial-gradient(ellipse 120% 80% at 50% -10%, rgba(22, 17, 13, 0), rgba(22, 17, 13, 0.9) 85%);
+  --button-primary-bg: #EDE7DA;
+  --button-primary-fg: #16110D;
+  --button-primary-hover-bg: #8FC2BA;
+  --button-primary-hover-fg: #16110D;
+  --button-ghost-border: #6B5F4F;
+  --button-ghost-hover-border: #D97D4A;
+}

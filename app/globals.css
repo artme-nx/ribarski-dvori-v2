@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--type-body);
+  --font-mono: var(--type-label);
+  --font-heading: var(--type-display);
+  --font-display: var(--type-display);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-sea: var(--sea);
+  --color-sea-bright: var(--sea-bright);
+  --color-sea-deep: var(--sea-deep);
+  --color-ember: var(--ember);
+  --color-ember-deep: var(--ember-deep);
+  --color-grout: var(--grout);
+  --color-stone-face: var(--stone-face);
+  --color-stone-face-bright: var(--stone-face-bright);
+  --ease-settle: var(--ease-settle);
+  --ease-tide: var(--ease-tide);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    background: var(--ember);
+    color: var(--stone-950, #16110D);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--type-display);
+  }
+  .text-label {
+    font-family: var(--type-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+
+  /* Stone grain texture — fine fractal-noise surface applied over every flagstone.
+     Pure CSS/SVG, no photography (none exists for this client).
+     Note: does NOT set `position` itself — pair with Tailwind's `relative` on
+     the host element so position stays owned by a single (Tailwind) utility. */
+  .stone-grain {
+    isolation: isolate;
+  }
+  .stone-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.09;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
