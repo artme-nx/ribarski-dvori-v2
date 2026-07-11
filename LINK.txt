@@ -1,0 +1,15 @@
+Ribarski Dvori — Konoba na otoku Prviću (Prvić Šepurine)
+
+Live: https://artme-nx.github.io/ribarski-dvori-v2/
+Repo: https://github.com/artme-nx/ribarski-dvori-v2
+Objavljeno: 2026-07-11
+
+Napomena: repo "ribarski-dvori-v2" je već postojao (jedan commit, 2026-06-18,
+jednostavan single-file HTML prototip u terracotta/cream stilu, GitHub Pages
+build nikad nije uspio — 404 uživo). Ta povijest je sačuvana kroz merge
+(--allow-unrelated-histories), stari index.html uklonjen u sljedećem commitu
+ali ostaje vidljiv u git logu. Ovaj Next.js "flagstone courtyard" redizajn je
+sada live na gh-pages grani.
+
+Klijent NIJE pronađen u Notion CRM bazi — trebalo bi ručno dodati red za
+"Ribarski Dvori" (Prvić Šepurine, konoba, kategorija Restorani i konobe).
